@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar Quiz</title>
+    <link rel="stylesheet" href="create-styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <h1>Criar Quiz</h1>
+                <p class="subtitle">Crie suas perguntas e respostas para o quiz</p>
+            </div>
+            <div class="avatar-container">
+                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100" 
+                     alt="User avatar" 
+                     class="avatar"
+                     title="Seu perfil">
+                <div class="dropdown">
+                    <button class="dropdown-item">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                        Perfil
+                    </button>
+                    <button class="dropdown-item danger">Sair</button>
+                </div>
+            </div>
+        </header>
+
+        <div class="guide-text">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="16" x2="12" y2="12"></line>
+                <line x1="12" y1="8" x2="12" y2="8"></line>
+            </svg>
+            <span>Comece adicionando perguntas e suas opções de resposta. Marque a resposta correta para cada pergunta.</span>
+        </div>
+
+        <div class="questions-container">
+            <div class="questions-list" id="questionsList"></div>
+            <button class="add-question-btn" onclick="addQuestion()" title="Adicionar nova pergunta">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 5v14M5 12h14"></path>
+                </svg>
+                Nova Pergunta
+            </button>
+        </div>
+
+        <div class="question-editor" id="questionEditor">
+            <input type="text" 
+                   class="question-input" 
+                   id="questionInput" 
+                   placeholder="Digite sua pergunta aqui..."
+                   aria-label="Texto da pergunta">
+            
+            <div class="options-container" id="optionsContainer"></div>
+            
+            <button class="add-option-btn" onclick="addOption()" title="Adicionar nova opção">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 5v14M5 12h14"></path>
+                </svg>
+                Adicionar opção de resposta
+            </button>
+        </div>
+
+        <div class="action-buttons">
+            <button class="preview-button" onclick="previewQuiz()" title="Visualizar quiz">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+                Visualizar
+            </button>
+            
+            <button class="save-button" onclick="saveQuiz()" title="Salvar quiz">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path>
+                    <polyline points="17 21 17 13 7 13 7 21"></polyline>
+                    <polyline points="7 3 7 8 15 8"></polyline>
+                </svg>
+                Salvar Quiz
+            </button>
+        </div>
+    </div>
+
+    <div class="toast" id="toast"></div>
+    <div class="modal" id="previewModal"></div>
+
+    <script src="create.js"></script>
+</body>
+</html>

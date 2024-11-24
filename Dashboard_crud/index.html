@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Quizes criados</h1>
+            <div class="avatar-container">
+                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100" alt="User avatar" class="avatar">
+                <div class="dropdown">
+                    <button class="dropdown-item">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                        Perfil
+                    </button>
+                    <button class="dropdown-item danger">Sair</button>
+                </div>
+            </div>
+        </header>
+
+        <div class="quiz-grid" id="quizGrid"></div>
+
+        <div class="create-button-container">
+            <button class="create-button" onclick="handleCreateNew()">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 5v14M5 12h14"></path>
+                </svg>
+                Criar novo Quiz
+            </button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
